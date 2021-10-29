@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.87.0">
+    <title>User Research Feedback</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/">
+
+
+
+    <!-- Bootstrap core CSS -->
+<link href="/static/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="/static/new/signin.css" rel="stylesheet">
+  </head>
+  <body class="text-center" style="background-color: {{ uColor }}!important;">
+
+<main class="form-signin" style="background-color: {{ uColor }}!important;">
+    <div class="card card2" style=" width: 35rem;">
+  <div class="card-body">
+    <h1 class=" card-title h3 mb-3 fw-normal">Questions Nr : {{ qNum }}</h1>
+    <h3 class="card-text">
+        <h4 class="title">How many Number <b>{{ findNum }}</b> can you find from the following numbers block?</h4>
+    </h3>
+       <img class="card-img" src="/static/img/{{ num }}.png" alt="">
+      <form class="row g-3 needs-validation" novalidate method="POST">
+          <div class="col-md-12">
+              <label for="validationCustom01" class="form-label">your answer</label>
+              <input type="text" name="number" class="form-control" id="validationCustom01" onkeypress="return isNumber(event)"  required>
+              <div class="valid-feedback"></div>
+              <div class="invalid-feedback">Please enter a valid name.</div>
+          </div>
+          <div class="col-md-12">
+              <button class="btn btn-primary" type="submit">Next</button>
+          </div>
+          <small>User Id : {{ session['id'] }}</small>
+      </form>
+  </div>
+</div>
+</main>
+
+
+
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    function isNumber(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+    }
+    return true;
+}
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+
+
+</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

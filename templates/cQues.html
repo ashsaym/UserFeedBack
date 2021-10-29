@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>User Research Feedback</title>
+  </head>
+  <body style="background-color: {{ uColor }}!important;">
+  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <div class="navbar-brand mx-auto" >
+      <h2>User Research Feedback</h2>
+  </div>
+</nav>
+  <div class="container mx-auto border border-primary text-center">
+      <div class="row">
+          <div class="col-md-12">
+              <h5>Please answer the following questions before jumping into the experiment:</h5>
+          </div>
+          <div class="col-md-12">
+              <form class="row g-3 needs-validation" novalidate method="POST">
+                 <div class="row-fluid mx-auto text-left">
+                     <div class="col-md-12">
+                         <h3>What is your task?</h3>
+                         <div class="radio">
+                             <label class="form-check-label">
+                                 <input class="form-check-input"  type="radio" name="optradio1" value="1"> Concentration task consists of 5 “number block questions”.</label>
+                         </div>
+                         <div class="radio">
+                             <label class="form-check-label">
+                                 <input class="form-check-input"  type="radio" name="optradio1" value="2"> Placebo task consists of 9 “geometric patterns”.</label>
+                         </div>
+                         <div class="radio">
+                             <label class="form-check-label">
+                                 <input  class="form-check-input" type="radio" name="optradio1" value="3"> SART task consists of 10 “counting symbols”.</label>
+                         </div>
+                         <div class="radio">
+                             <label class="form-check-label">
+                                 <input class="form-check-input"  type="radio" name="optradio1" value="4"> BOMAT task consists of 27 “graphic problems”.</label>
+                         </div>
+                     </div>
+                     <div class="col-md-12">
+                         <h3>How many thaler do you get for each correct answer?</h3>
+                         <div class="radio">
+                             <label class="form-check-label">
+                                 <input class="form-check-input"  type="radio" name="optradio2" value="1"> 1 Thaler </label>
+                         </div>
+                         <div class="radio">
+                             <label><input class="form-check-input"  type="radio" name="optradio2" value="2"> 2 Thaler </label>
+                         </div class="form-check-label">
+                         <div class="radio">
+                             <label class="form-check-label">
+                                 <input class="form-check-input"  type="radio" name="optradio2" value="3"> 3 Thaler </label>
+                         </div>
+                         <div class="radio">
+                             <label class="form-check-label">
+                                 <input class="form-check-input"  type="radio" name="optradio2" value="4"> 4 Thaler </label>
+                         </div>
+                     </div>
+                     <div class="col-md-12">
+                         <h3>When do you receive thaler?</h3>
+                         <div class="radio">
+                             <label class="form-check-label">
+                                 <input class="form-check-input"  type="radio" name="optradio3" value="1"> For each correct answer </label>
+                         </div>
+                         <div class="radio">
+                             <label class="form-check-label">
+                                 <input class="form-check-input"  type="radio" name="optradio3" value="2"> For each wrong answer </label>
+                         </div>
+                         <div class="radio">
+                             <label class="form-check-label">
+                                 <input class="form-check-input"  type="radio" name="optradio3" value="3"> For both a & b </label>
+                         </div>
+                         <div class="radio">
+                             <label class="form-check-label">
+                                 <input class="form-check-input"  type="radio" name="optradio3" value="4"> None of the above </label>
+                         </div>
+                     </div>
+                 </div>
+                  <div class="col-md-12">
+                      <button class="btn btn-primary mx-auto bg-success" type="submit">Submit</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+
+  <!-- Footer -->
+  <br><br><br>
+<footer class="page-footer font-small blue mx-auto">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center bg-primary" style="color: white">
+      This website is only for experimental purpose uses .
+      <i>User Id : {{ session['id'] }}</i>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

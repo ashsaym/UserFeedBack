@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>User Research Feedback</title>
+  </head>
+  <body style="background-color: {{ uColor }}!important;">
+  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <div class="navbar-brand mx-auto" >
+      <h2>User Research Feedback</h2>
+  </div>
+</nav>
+  <div class="container mx-auto border border-primary text-center">
+      <div class="row">
+          <div class="col-md-12">
+              <h2>Welcome to the research experiment!</h2>
+              <p>First of all, I would like to thank you for participating in this research experiment. During the experiment we require your complete, undistracted attention. For your participation, you are going to be evaluated with one thaler (1T) for each correct answer. So, more correct answer is the key to obtain more thaler. It means, if you give one correct answer, you earn 1 thaler, if you give two correct answers, you earn 2 thaler and this is how you can earn up to 5 thaler. But bear in mind, for each wrong answer - you earn no thaler for that question. There are five concentration questions, so if you give each answer correctly, you obtain 5 thaler fully.</p>
+              <p>The entire experiment take place online, and all interaction between you are going be taken place through the computers. As the layover of this experiment is suitable only for desktop and not for the mobile phones, we require that you only take part with your laptop/desktop and not with your mobile phone. It is important that you do not google or in any way try to communicate with others. Participants intentionally violating the rules may fail to qualify for the experiment. All decisions are made anonymously, e.g., none of the other participants learns the identity of the person who made a particular decision.</p>
+              <p>Next, I provide a description of the terms and conditions of the experiment where you are given a complete overview of the concentration task. Altogether, you must solve five “number block questions” and the difficulty level of each question increases when you solve each task. It implies that the second question is more difficult than the first one, third question is more difficult than the second one, fourth question is more difficult than the third one and last but not the least, fifth question is more difficult than the fourth one.</p>
+              </div>
+          <div class="col-md-12">
+              <h3>Terms and conditions:</h3>
+              <ol class="text-left">
+                  <li>The task is to solve correctly as many numbers of block questions as possible.</li>
+                  <li>Each member should have a laptop/desktop to operate during the experiment.</li>
+                  <li>The type of questions: Each task consists of counting, how often a number appears in a number block. If the correct number of the digit (p.s. please put only digit in the answer box, not alphabet/letters) in a number block has been entered, then confirm with Next. In that way, all five “number blocks question” appears one by one after confirming with ‘Next’ and it is worth mentioning again that the level of difficulty of those question increases with each solved task. Below is provided the example of the task:
+                      <br>
+                      <img  class="border border-info mx-auto" src="/static/example.png" alt="" style="width: 600px; height: 400px">
+                  </li>
+                  <li>Recalling, the whole experiment consists of five different tasks, therefore you can earn up to five thaler by solving each task perfectly.</li>
+              </ol>
+              <h6>Best of luck and please send me an email (mishu_thegame@yahoo.com) if you have any questions, I will then reply to you for your assistance immediately.</h6>
+          </div>
+      </div>
+  </div>
+  <form class="row g-3 needs-validation" novalidate method="POST">
+
+                      <button class="btn btn-primary mx-auto bg-success" type="submit">Understood</button>
+              </form>
+  <!-- Footer -->
+  <br><br><br>
+<footer class="page-footer font-small blue mx-auto">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center bg-primary">
+      This website is only for experimental purpose uses .
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

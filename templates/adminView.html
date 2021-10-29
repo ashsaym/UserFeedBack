@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Title Page-->
+    <title>User Feed Back Full Results</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <!-- Main CSS-->
+    <link href="/static/css/main2.css" rel="stylesheet" media="all">
+</head>
+
+<body style="background-color: white!important;">
+<div class="container">
+    <br>
+    <table class="table">
+  <thead>
+  <h2>Details Report</h2>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Color</th>
+        <th scope="col">Time Taken</th>
+        <th scope="col">Total</th>
+        <th scope="col">Payment</th>
+
+        <th scope="col">C1</th>
+        <th scope="col">C2</th>
+        <th scope="col">C3</th>
+
+        <th scope="col">S1</th>
+        <th scope="col">S2</th>
+        <th scope="col">S3</th>
+        <th scope="col">S4</th>
+    </tr>
+  </thead>
+  <tbody>
+  {%for i in range(0, lent)%}
+    <tr>
+      <th scope="row">{{ allUser[i].id }}</th>
+      <td>{{ allUser[i].userColor }}</td>
+    <td>{{ allUser[i].timetaken }}s</td>
+    <td>{{ allUser[i].userCorrectMark }}</td>
+    <td>{{ allUser[i].payment }} Thaler </td>
+
+        <td>{{ allUser[i].c1 }} </td>
+    <td>{{ allUser[i].c2 }} </td>
+    <td>{{ allUser[i].c3 }} </td>
+
+    <td>{{ allUser[i].s1 }} </td>
+    <td>{{ allUser[i].s2 }} </td>
+    <td>{{ allUser[i].s3 }} </td>
+    <td>{{ allUser[i].s4 }} </td>
+
+    </tr>
+  {%endfor%}
+  </tbody>
+</table>
+</div>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
